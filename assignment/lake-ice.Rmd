@@ -1,0 +1,319 @@
+---
+title: "Lake Ice Phenology"
+author: 'Quinn Thomas'
+output:
+  github_document: default
+editor_options: 
+  markdown: 
+    wrap: 80
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
+```
+
+# Data
+
+The data for this module are provided within the GitHub repository in the `data`
+sub-directory.
+
+-   Data: `data/lake_ice_off_data_2022.xlsx`
+-   Metadata: `data/lake_metadata.json`
+
+# Import and Prep
+
+The data are in a multi-sheet excel file named
+`data/lake_ice_off_data_2022.xlsx`. You will need to use the `read_excel()`
+function in the `readxl` package to import the data into R as a data frame. You
+can learn more about importing from excel
+[here](https://r4ds.hadley.nz/spreadsheets.html#prerequisites)
+
+```{r}
+
+```
+
+Now look at a preview of the data using the `head()` function. The `doy` in
+`ice_off_doy` stands for "day of year" and is the day within the year where ice
+off occurred.
+
+```{r}
+
+```
+
+There should be 3 columns and \~2,659 rows.
+
+## Tidy the data
+
+We will practice key skills in the module using a focal lake. Use the `filter`
+function to filter the larger data to only contain the data from Lake Sunapee, a
+lake in New Hampshire. Filter the data `ice_data` by the variable `lake_name` to
+create a data.frame called `sunapee`.
+
+```{r}
+
+```
+
+You will be using the `sunapee` data for the rest of the module until Question
+11
+
+## Visualize the data
+
+**Question 1:**
+
+To visualize the data from Lake Sunapee, create an x-y plot with the year
+(`year`) on the x-axis and the day of year (`ice_off_doy`) on the y-axis. Plot
+the points (`geom_point`) and connect the points with lines (`geom_line`). Be
+sure that the title, x-axis and y-axis labels are clearly labeled.
+
+**Answer 1:**
+
+```{r}
+
+```
+
+# How is ice cover changing over time at Lake Sunapee?
+
+We want to model how the ice-off date is changing through time. Our approach in
+this module is to use a linear regression that predicts the ice-off day of year
+as a function of the year. The `lm` function will estimate the parameters of the
+DOY = b + m \* YEAR linear regression where b is the intercept and m is the
+slope.
+
+**Question 2:**
+
+What do you expect the sign (plus, minus, or no change) to be for the slope of
+the relationship? Why?
+
+**Answer 2:**
+
+Use the `lm` function to predict `ice_off_doy` as a function (`~`) of the year
+for the data.frame called `sunapee`. Create an object called `fit` that contains
+results of the linear model.
+
+```{r}
+
+```
+
+Then use the function `summary` to explore the result of the `lm` function
+
+```{r}
+summary(fit)
+```
+
+The results of your linear model are in an object named `fit`, so you can find
+the regression coefficients at `fit$coefficients[1]` (the intercept) and
+`fit$coefficients[2]` (the slope). Confirm that `fit$coefficients[1]` and
+`fit$coefficients[2]` match the values expected from the summary command you ran
+above.
+
+```{r}
+fit$coefficients[1]
+fit$coefficients[2]
+```
+
+**Question 3:**
+
+What is the direction of the slope? How does this match your expectation from
+Question 2?
+
+**Answer 3:**
+
+# Is our model any good?
+
+## R2
+
+First, it is important to understand how much variation is explained by the
+model using the R2 value in the `summary`. A value of R2 close to 1 means that
+the predictor (`year`) explains nearly all of the variation in the thing we care
+about: `ice_off_doy`. A value of R2 close to 0 explains very little of the
+variation in `ice_off_doy`. Since we want to be able to explain how
+`ice_off_doy` is changing over time using `year,` we are aiming for a high R2. A
+low R2 would indicate that our model isn't particular good at explaining what
+future values of `ice_off_doy` will be.
+
+**Question 4:**
+
+What is the R2 for the regression? Based on the R2, is `year` and `ice_off_doy`
+strongly related?
+
+**Answer 4:**
+
+## Residuals normally distributed
+
+Second, it is important that the residuals from our linear model are normally
+distributed similar to the shape of the following:
+
+```{r}
+ggplot(data = tibble(value = rnorm(1000, 0, 1))) +
+  geom_histogram(aes(x = value), bins = 20)
+```
+
+We will use a histogram to visually assess whether this requirement is met.
+First, you will need to calculate the residuals. The residuals are the
+difference between the ice-off DOY that your linear regression predicts and the
+observed DOY in each year.
+
+-   Residuals that do not average to zero indicate that your linear regression
+    is biased.
+
+-   Residuals that are widely spread out indicate that your linear regression is
+    not very useful for prediction.
+
+You will use a histogram to examine the residuals. First, the code uses the
+coefficients to predict the ice-off DOY at each year. Second, calculate the
+residuals by subtracting the predicted ice-off DOY from the observed DOY.
+
+```{r}
+sunapee <- sunapee %>% 
+  mutate(predicted = fit$coefficients[1] + year * fit$coefficients[2], 
+         residual = ice_off_doy - predicted) #Observed - Predicted
+```
+
+**Question 5:**
+
+Use the `add_predictions()` and `add_residuals()` functions from the `modelr`
+package (loads with the tidyverse) to add the predictions and residuals. This
+accomplishes the same thing above but doesn't require you to specifically write
+our your model with the coefficients (thus is more scalable to other models)
+
+**Answer 5:**
+
+```{r}
+
+```
+
+Now to visualize the residuals use `geom_histogram()` to plot them as a
+histogram. I recommend using a bin width of 5 in the histogram.
+
+```{r}
+
+```
+
+**Question 6:**
+
+Do the residuals meet the assumptions of the linear regression? (are the
+residuals normally distributed with the distribution centered around zero)?
+
+**Answer 6:**
+
+## The slope is different from zero
+
+A slope could appear to be higher or lower than zero but the uncertainty in the
+slope is large enough that there is a chance that the value is 0 (thus limiting
+our capacity believe the value for the slope is not zero). Here we will focus on
+the p-value of the slope. The p value is the probability of obtaining a slope at
+least as extreme as the one calculated from the data, assuming the truth of the
+null hypothesis that the slope is 0 (from
+<https://en.wikipedia.org/wiki/P-value>) In this case, what is the probability
+of observing our slope value assuming the actually slope is 0. Smaller
+probabilities mean there is lower change that our slope could actually be the
+same as 0.
+
+**Question 7:**
+
+Based on the `summary()` above, what is the p-value for the slope?
+
+**Answer 7:**
+
+## The slope physically meaningful
+
+A slope value could have a low probability of being 0 but the magnitude of
+change is functionally meaningless in the physical world (i.e., the rate of
+change is so small that we would not think much of it). This can occur
+particularly when analyzing large datasets.
+
+**Question 8:**
+
+Based on the slope value, how many more years are need to pass before the lake
+has 1 week of change in ice off? Do you think this is meaningful? Why?
+
+**Answer 8:**
+
+## Overall model assessment
+
+**Question 9:**
+
+How comfortable are you proceeding with using this linear model for additional
+analysis and prediction? Why?
+
+**Answer 9:**
+
+Now plot the data for Lake Sunapee (just like above - year vs. ice of doy) but
+add the results from your regression. You will use the `geom_abline` geom. Using
+the help (`?geom_abline`), the Tidyverse cheatsheet, or internet for how to use
+the geom.
+
+```{r}
+#INSERT CODE
+```
+
+Now use the regression model to predict the ice-off day of year in 2030.
+Remember that year in the linear model (y = b + mx).
+
+```{r}
+#INSERT CODE
+```
+
+# Is the ice-off day of year changing more quickly in more recent years at Lake Sunapee?
+
+To answer this question, you need to divide the Sunapee dataset into two
+datasets that represent an early and later period. For this analysis use the
+year 1970 as a cut-off (one dataset is before 1970 and the other is 1970 and
+after).
+
+**Question 10:**
+
+Use the skills developed above to evaluate the question "Is the ice-off day of
+year changing more quickly in more recent years at Lake Sunapee?"
+
+**Answer 10:**
+
+Use a mix of code, figures, and text to present your analysis.
+
+# Are lakes across the globe showing similar patterns to Lake Sunapee
+
+To answer this question, you need to divide use all the lakes in the doy-off
+dataset.
+
+**Question 11:**
+
+Present an analysis evaluates how the rate of change in doy-off day-of-year is
+changing over time across the globe. Questions you should address in your
+analysis
+
+-   What is the distribution of the slopes for the different lake? Are they all
+    the same sign?
+-   Are the slopes related to any of the characteristics of the lakes?
+
+To address the second part of the Question 11 you will need to use the metadata
+describing the characteristics of the different lakes. The meta is JSON file in
+the data sub-directory (`data/lake_metadata.json`). A JSON file is a common
+format used when requesting data from database hosted remotely. JSON stands for
+JavaScript Object Notation. You can learn more about JSON
+[here](https://r4ds.hadley.nz/rectangling.html#json). You will need to install
+the `jsonlite` package and use the `read_json()` function to read in the
+metadata (you can call this `df_metadata`)
+
+You will generate a data.frame of slopes and their associated lake_name. To link
+this table with the lake characteristics in the JSON file, you will need to use
+the `left_join()` function in the tidyverse. You would use it as follows:
+
+    df <- left_join(df_slopes, df_metadata, by = "lake_name")
+
+This basically says to create new columns in `df_slopes` that correspond to the
+columns in `df_metadata` and use the `lake_name` to match and make sure that
+characteristics columns and slope columns correspond to the correct `lake_name`.
+In this case, `lake_name` is the key that connects the two table. This is
+necessary because the order of the lake_names in `df_metadata` is not
+necessarily the same as in `df_slopes`. You can learn about `left_join()`
+[here](https://r4ds.hadley.nz/joins.html#mutating-joins)
+
+**Answer 11:**
+
+# Citation
+
+This module was initially developed as a Excel-based activity by Carey, C.C.,
+J.L. Klug, and D.C. Richardson. 1 April 2015. Project EDDIE: Lake Ice Phenology.
+Project EDDIE Module 1, Version 1:
+<http://cemast.illinoisstate.edu/data-for-students/modules/ice-phenology.shtml>.
+Module development was supported by NSF DEB 1245707.
