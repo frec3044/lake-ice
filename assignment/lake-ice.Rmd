@@ -53,8 +53,7 @@ create a data.frame called `sunapee`.
 
 ```
 
-You will be using the `sunapee` data for the rest of the module until Question
-11
+You will be using the `sunapee` data for the rest of the module until Question 11
 
 ## Visualize the data
 

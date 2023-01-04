@@ -12,6 +12,6 @@ Additionally this repository, and all student repositories, includes most of the
 
 - `README.md` this file, a general overview of the repository in markdown format.  
 - `lesson.md` a description of the assignment.
-- `rubric.md` the rubric for how the module with be accessed.
+- `rubric.md` the rubric for how the module will be accessed.
 - `.gitignore` Optional file, ignore common file types we don't want to accidentally commit to GitHub. Most projects should use this. 
 - `*.Rproj` an R-Project file created by RStudio for it's own configuration of the repo files.  Some people prefer to `.gitignore` this file, it is optional for team repos to ignore or commit their own `<REPO-NAME>.Rproj` file. 

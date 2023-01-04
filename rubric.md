@@ -10,7 +10,7 @@
 - 5 pts per question for Questions 10 & 11 (total of 10 pts)
     - **0pts**: no code or answer provided
     - **1 pt**: Code provided and includes at least one correct tidyverse function but is not complete AND/OR (if text answer) response present but limited in depth of answer
-    - **2 pt**: Code, text, and plots include functions that were introduced in the module but scientific analysis is not valid.
+    - **2 pt**: Code, text, and plots include functions that were introduced in the module but the scientific analysis is not valid.
     - **3 pt**: Code, text, and plots provides valid scientific analysis of observed trends but limited or incorrect interpretation
     - **4 pt**: Text provides scientific analysis of observed trends and reflects on implications or hypotheses for those patterns and code uses multiple skills covered in the module
     - **5 pt**: Code, text, and plots provides an analysis that clearly uses the skills and concepts introduced in the module. Highly insightful analysis that goes beyond the questions provided in the template.
