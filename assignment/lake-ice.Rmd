@@ -86,8 +86,9 @@ the relationship? Why?
 **Answer 2:**
 
 Use the `lm` function to predict `ice_off_doy` as a function (`~`) of the year
-for the data.frame called `sunapee`. Create an object called `fit` that contains
-results of the linear model.
+for the data.frame called `sunapee`. You can learn more about the lm function [here](https://www.datacamp.com/tutorial/linear-regression-R)
+
+Create an object called `fit` that contains results of the linear model.
 
 ```{r}
 
@@ -96,7 +97,7 @@ results of the linear model.
 Then use the function `summary` to explore the result of the `lm` function
 
 ```{r}
-summary(fit)
+
 ```
 
 The results of your linear model are in an object named `fit`, so you can find
@@ -171,7 +172,7 @@ sunapee <- sunapee %>%
 **Question 5:**
 
 Use the `add_predictions()` and `add_residuals()` functions from the `modelr`
-package (loads with the tidyverse) to add the predictions and residuals. This
+package (installs with the tidyverse but you need to load it with ` library()`) to add the predictions and residuals. This
 accomplishes the same thing above but doesn't require you to specifically write
 our your model with the coefficients (thus is more scalable to other models)
 
@@ -223,7 +224,7 @@ particularly when analyzing large datasets.
 
 **Question 8:**
 
-Based on the slope value, how many more years are need to pass before the lake
+Based on the slope value, how many more years are needed to pass before the lake
 has 1 week of change in ice off? Do you think this is meaningful? Why?
 
 **Answer 8:**
@@ -282,30 +283,8 @@ analysis
 
 -   What is the distribution of the slopes for the different lake? Are they all
     the same sign?
--   Are the slopes related to any of the characteristics of the lakes?
+-   What lake showing the fastest rate of change in ice cover?
 
-To address the second part of the Question 11 you will need to use the metadata
-describing the characteristics of the different lakes. The meta is JSON file in
-the data sub-directory (`data/lake_metadata.json`). A JSON file is a common
-format used when requesting data from database hosted remotely. JSON stands for
-JavaScript Object Notation. You can learn more about JSON
-[here](https://r4ds.hadley.nz/rectangling.html#json). You will need to install
-the `jsonlite` package and use the `read_json()` function to read in the
-metadata (you can call this `df_metadata`)
-
-You will generate a data.frame of slopes and their associated lake_name. To link
-this table with the lake characteristics in the JSON file, you will need to use
-the `left_join()` function in the tidyverse. You would use it as follows:
-
-    df <- left_join(df_slopes, df_metadata, by = "lake_name")
-
-This basically says to create new columns in `df_slopes` that correspond to the
-columns in `df_metadata` and use the `lake_name` to match and make sure that
-characteristics columns and slope columns correspond to the correct `lake_name`.
-In this case, `lake_name` is the key that connects the two table. This is
-necessary because the order of the lake_names in `df_metadata` is not
-necessarily the same as in `df_slopes`. You can learn about `left_join()`
-[here](https://r4ds.hadley.nz/joins.html#mutating-joins)
 
 **Answer 11:**
 
