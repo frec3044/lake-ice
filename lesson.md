@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 80
----
-
 # Lake Ice Phenology Module
 
 ## Overview
