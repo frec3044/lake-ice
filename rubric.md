@@ -1,13 +1,13 @@
 # Lake Ice Phenology: Detailed Rubric
 
-## Module weight: 33 pts
+## Module weight: 35 pts
 
-- 2 pts per question for Question 1-9 (total of 18 pts)
+- 2 pts per question for Question 1-10 (total of 20 pts)
     - **0pts**: no code or answer provided
     - **1 pt**: Code provided and includes at least one correct tidyverse function but is not complete AND/OR (if text answer) response present but limited in depth of answer
     - **2 pt**: Correct provide provided AND/OR insightful text answer provided that correct describes patterns or addresses question.
     
-- 5 pts per question for Questions 10 & 11 (total of 10 pts)
+- 5 pts per question for Questions 11 & 12 (total of 10 pts)
     - **0pts**: no code or answer provided
     - **1 pt**: Code provided and includes at least one correct tidyverse function but is not complete AND/OR (if text answer) response present but limited in depth of answer
     - **2 pt**: Code, text, and plots include functions that were introduced in the module but the scientific analysis is not valid.
