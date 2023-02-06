@@ -8,6 +8,8 @@ and earlier ice-off dates (or not even freezing at all). In this module, you
 will explore long-term ice-off datasets from several lakes and use linear
 regression to make predictions about ice-off dates in the future.
 
+Phenology is the study of cyclic and seasonal natural phenomena, esp. in relation to climate and plant and animal life 
+
 -   author: Quinn Thomas (@rqthomas)
 -   contact: [rqthomas\@vt.edu](mailto:rqthomas@vt.edu){.email}
 -   url:
@@ -78,7 +80,6 @@ This module has been developed as the second module in a junior-level Environmen
 ## Background Reading
 
 The background reading is embbed in the assignment Rmarkdown as links to the relevant sections of [R for Data Science book (2nd edition)](https://r4ds.hadley.nz) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.
-
 
 ## References
 
