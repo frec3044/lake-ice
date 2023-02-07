@@ -298,6 +298,11 @@ lake_characteristics <- tribble(~lake_name, ~latitude, ~lake_area, ~tropic_statu
 ```             
 **Answer 12:**
 
+
+# Knitting and committing
+
+Remember to Knit your document as a `github_document` and comment+push to GitHub your code, knitted document, and any files in the `figure-gfm` subdirectory that was created when you knitted the document.
+
 # Citation
 
 This module was initially developed as a Excel-based activity by Carey, C.C.,
