@@ -39,7 +39,6 @@ of `here()` to the location of the data within your project/GitHub repository.
 ```{r}
 library(here)
 file_name <- file.path(here(),"data/lake_ice_off_data_2022.xlsx")
-
 ```
 
 Now look at a preview of the data using the `head()` function. The `doy` in
@@ -47,6 +46,8 @@ Now look at a preview of the data using the `head()` function. The `doy` in
 off occurred (January 1 = doy 1)
 
 ```{r}
+library(readxl)
+df <- read_excel(file_name)
 
 ```
 
