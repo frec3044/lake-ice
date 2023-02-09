@@ -25,9 +25,20 @@ The data are in a multi-sheet excel file named
 `data/lake_ice_off_data_2022.xlsx`. You will need to use the `read_excel()`
 function in the `readxl` package to import the data into R as a data frame. You
 can learn more about importing from excel
-[here](https://r4ds.hadley.nz/spreadsheets.html#prerequisites)
+[here](https://r4ds.hadley.nz/spreadsheets.html#prerequisites).  Tip: remember that
+excel files can have multiple sheets.
+
+For some reason `read_excel()` does not like relative paths, we will used the 
+`here` package to local where you your computer your project is located and attached
+the relative path to it.  First install the `here` package.  Then running the `here()`
+function gets the path to your project.  Using `file.path()` appends the results
+of `here()` to the location of the data within your project/GitHub repository.
+
+
 
 ```{r}
+library(here)
+file_name <- file.path(here(),"data/lake_ice_off_data_2022.xlsx")
 
 ```
 
