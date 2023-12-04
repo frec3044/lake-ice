@@ -1,16 +1,10 @@
 ---
 title: "Lake Ice Phenology"
 author: 'Quinn Thomas'
-output:
-  github_document: default
-editor_options: 
-  markdown: 
-    wrap: 80
+format:
+  html:
+    embed-resources: true
 ---
-
-```{r setup, include=TRUE}
-knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
-```
 
 # Data
 
@@ -48,7 +42,6 @@ off occurred (January 1 = doy 1)
 ```{r}
 library(readxl)
 df <- read_excel(file_name)
-
 ```
 
 There should be 3 columns and \~2,659 rows.
@@ -250,7 +243,7 @@ analysis and prediction? Why?
 **Answer 9:**
 
 Now plot the data for Lake Sunapee (just like above - year on x-axis vs. ice of doy on y axis) but
-add the line from your regression results (e.g., fit intercept and slope). You will use the [`geom_abline` geom](https://ggplot2.tidyverse.org/reference/geom_abline.html). 
+add the line from your regression results (e.g., fit intercept and slope). You will use the [`geom_abline`](https://ggplot2.tidyverse.org/reference/geom_abline.html). 
 
 ```{r}
 #INSERT CODE
@@ -295,7 +288,7 @@ analysis
 
 -   What is the distribution of the slopes for the different lake? Are they all
     the same sign?
--   What lake os showing the fastest rate of change in ice cover?
+-   What lake is showing the fastest rate of change in ice cover?
 -   Do any of the following characteristics relate to differences in the slope?
 
 ```{r}
@@ -311,9 +304,9 @@ lake_characteristics <- tribble(~lake_name, ~latitude, ~lake_area, ~tropic_statu
 **Answer 12:**
 
 
-# Knitting and committing
+# Rendering and committing
 
-Remember to Knit your document as a `github_document` and comment+push to GitHub your code, knitted document, and any files in the `figure-gfm` subdirectory that was created when you knitted the document.
+Remember to Render your document as a `html` and comment+push to GitHub your code, and rendered html that was created when you knitted the document.
 
 # Citation
 
