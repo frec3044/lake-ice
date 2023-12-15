@@ -1,8 +1,14 @@
-# Forest Inventory and Carbon Module
+# Lake Ice Phenology Module
 
 ## Overview
 
-Estimating carbon storage is important for quantifying the climate mitigation benefit provided by an ecosystem.  Carbon that is stored in an ecosystem is carbon that is not in the atmosphere and thus not contributing to climate change.  Carbon storage is quantified by adding up the carbon in different "stocks" of carbon within the ecosystem, with vegetation and soils being the most important stocks in most terrestrial ecosystems.  You will be calculating the stock of carbon in forest across the U.S. using individual tree measurements of diameter. 
+Lakes are changing worldwide due to altered climate. Many lakes that were
+historically frozen in the winter are now experiencing fewer days of ice cover
+and earlier ice-off dates (or not even freezing at all). In this module, you
+will explore long-term ice-off datasets from several lakes and use linear
+regression to make predictions about ice-off dates in the future.
+
+Phenology is the study of cyclic and seasonal natural phenomena, esp. in relation to climate and plant and animal life 
 
 -   author: Quinn Thomas (@rqthomas)
 -   contact: [rqthomas\@vt.edu](mailto:rqthomas@vt.edu){.email}
@@ -14,29 +20,52 @@ Estimating carbon storage is important for quantifying the climate mitigation be
 
 ## Feedback
 
-<https://github.com/frec-3044/land-carbon-template/issues>
+<https://github.com/frec-3044/lake-ice-template/issues>
 
 ## Questions
 
-How much carbon is stored in a forest ecosystem and how does it differ across the U.S.?
+Are lakes losing ice earlier in the year?
 
 ## Ojectives
 
-### Environmental Learning objectives
+-   Understand how global climate change impacts local aquatic ecosystems
+-   Analyze a long-term ice-off dataset with understanding of statistical
+    differences, biological relevance, and sources of variation
+-   Predict future scenarios of ice-off
+-   Applying linear regression models
+-   Develop skills using R for graphing and statistics
+-   Generate Rmarkdown documents
+-   Practice the data science workflow in the context of the Tidyverse.
 
-- Describe how vegetation carbon stocks vary between different ecosystem types 
-- Calculate carbon in trees from individual tree measurements of size
-- Scale carbon estimates from the individual tree to the plot (i.e., a set area)
+## Requires
 
-### Data Science Learning objectives
+-   Tidyverse, specifically:
 
-- Joining tables
-- Accessing data from a database
-- Developing and completing a data analysis plan.
+    -   mutate()
+
+    -   group_by()
+
+    -   ggplot()
+
+    -   geom_line()
+
+    -   geom_point()
+
+    -   select()
+
+    -   summarize()
+
+    -   mean()
+
+    -   filter()
+
+    -   rename()
+
+    -   head()
 
 ## Instructions
 
-  - Open the notebook `assignment/forest-inventory.Rmd` in RStudio
+  - Open the notebook `assignment/lake-ice.Rmd` in RStudio
   - Work through the exercises described in the notebook.
   - `knit` + commit output files to GitHub
 
@@ -54,7 +83,8 @@ The background reading is embbed in the assignment Rmarkdown as links to the rel
 
 ## References
 
-This module uses data from the [National Ecological Observatory Network](https://www.neonscience.org).  Specifically, it uses the Vegetation Structure data product: [DP1.10098.001](https://data.neonscience.org/data-products/DP1.10098.001)
-
-Jennifer C. Jenkins, David C. Chojnacky, Linda S. Heath, and Richard A. Birdsey. 2003. National-Scale Biomass Estimators for United States Tree Species. Forest Science 49: 12 - 35. 
-
+This module was initially developed as a Excel-based activity by Carey, C.C.,
+J.L. Klug, and D.C. Richardson. 1 April 2015. Project EDDIE: Lake Ice Phenology.
+Project EDDIE Module 1, Version 1:
+<http://cemast.illinoisstate.edu/data-for-students/modules/ice-phenology.shtml>.
+Module development was supported by NSF DEB 1245707.

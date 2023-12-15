@@ -45,7 +45,7 @@ The study of cyclic and seasonal natural phenomena, esp. in relation to climate 
 
 ## How do we measure ice-off?
 
-Day-of-year = 0-365 (or 366) number defining the day since Jan 1 of that year. 
+Day-of-year = 0-365 (or 366) number defining the day since Jan 1 of that year.
 
 ![](img/sunpee-ice-off.png)
 
