@@ -1,0 +1,91 @@
+---
+title: "Lake Ice Phenology"
+format: 
+  revealjs:
+    embed-resources: true
+editor: visual
+---
+
+## Why
+
+Lakes are changing worldwide due to altered climate. Many lakes that were historically frozen in the winter are now experiencing fewer days of ice cover and earlier ice-off dates.
+
+![](img/lake-ice1.png)
+
+## Phenology
+
+The study of cyclic and seasonal natural phenomena, esp. in relation to climate and plant and animal life
+
+## What is ice-off
+
+![](img/ice-breakup1.png) ![](img/ice-breakup2.png)
+
+## How does ice melt?
+
+-   During the period of ice cover, snow on the ice both reflects sunlight and insulates the lake. With a thick snow layer, the lake neither gains nor loses heat to the atmosphere. The sediment at the bottom of the lake can actually be a small heat source to the water column over the winter, from stored heat over the summer.
+-   In the early spring, as the air warms and solar radiation increases, the snow melts, allowing light to penetrate the ice. The ice can act like glass in a greenhouse, allowing the lake water to warm. As a result, the ice begins to melt from the bottom, not the top.
+
+## How does ice melt? (cont'd)
+
+-   When the ice erodes to a layer between 4 and 12 inches (10-30 cm) thick, it transforms into long vertical crystals called "candles." These candles transmit light very well, so the ice starts to look black.
+
+![](img/ice-candles.png)
+
+## How does ice melt? (cont'd)
+
+-   Warming continues, promoting melting of the ice from below because the light energy is being transferred to the water below the ice as heat. Meltwater fills in between the crystals, which begin breaking apart. The surface of the ice begins to appear grey.
+-   Finally, the ice thickness decreases further, allowing strong winds to break the surface of the ice apart. The candles will often collect on one side of the lake, making a tinkling sound as they pile up on the shore.
+
+## Why are changes in ice-off dates important ecologically
+
+-   Clearwater phase mismatch
+-   Warmer water -\> less dissolved oxygen -\> Bad for cold-water fish that need cold temps and lots of oxygen
+-   Less dissolved oxygen and anoxia -\> Increase in P and reduced metals cycling from the sediment
+-   Warmer water -\> Increased primary productivity
+
+## How do we measure ice-off?
+
+Day-of-year = 0-365 (or 366) number defining the day since Jan 1 of that year. 
+
+![](img/sunpee-ice-off.png)
+
+## Graphing Sunapee dataset
+
+![](img/sunapee-graph.png)
+
+## Linear regression
+
+![](img/regression1.png)
+
+## Linear regression
+
+![](img/regression2.png)
+
+## Linear regression
+
+![](img/regression3.png)
+
+## Linear regression
+
+![](img/r2-1.png)
+
+## Linear regression
+
+![](img/r2-2.png)
+
+## Linear regression
+
+![](img/r2-3.png)
+
+## Linear regression
+
+![](img/sunpee-graph2.png)
+
+## Key Questions
+
+-   How fast is the date that ice-off occurs changing over time?\
+-   How does this rate of change differ among lakes across the globe?
+
+## Lakes in data set
+
+![](img/lake-table.png)
