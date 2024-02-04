@@ -1,6 +1,6 @@
 ---
 title: "Lake Ice Phenology"
-author: 'Quinn Thomas'
+author: 'Add name'
 format:
   html:
     embed-resources: true
@@ -65,8 +65,9 @@ You will be using the `sunapee` data for the rest of the module until Question 1
 
 To visualize the data from Lake Sunapee, create an x-y plot with the year
 (`year`) on the x-axis and the day of year (`ice_off_doy`) on the y-axis. Plot
-the points (`geom_point`) and connect the points with lines (`geom_line`). Be
-sure that the title, x-axis and y-axis labels are clearly labeled.
+the points (`geom_point`) and connect the points with lines (`geom_line`). 
+
+Be sure that the title, x-axis and y-axis labels are clearly labeled.
 
 **Answer 1:**
 
@@ -190,8 +191,7 @@ histogram. I recommend using a bin width of 10 in the histogram.
 
 **Question 6:**
 
-Show Histogram. Do the residuals meet the assumptions of the linear regression? (are the
-residuals normally distributed with the distribution centered around zero)?
+Show Histogram. Do the residuals meet the assumptions of the linear regression? (are the residuals normally distributed with the distribution centered around zero)?
 
 **Answer 6:**
 
@@ -229,7 +229,7 @@ particularly when analyzing large datasets.
 **Question 8:**
 
 Based on the slope value, how many more years are needed to pass before the lake
-has 1 week of change in ice off? Do you think this is meaningful? Why?
+has 1 week of change in ice off doy? Do you think this is meaningful? Why?
 
 **Answer 8:**
 
@@ -250,6 +250,7 @@ add the line from your regression results (e.g., fit intercept and slope). You w
 ```
 
 **Question 10:**
+
 Use the regression model to predict the ice-off day of year in 2030.
 Remember that year in the linear model (y = b + mx).
 
@@ -306,7 +307,7 @@ lake_characteristics <- tribble(~lake_name, ~latitude, ~lake_area, ~tropic_statu
 
 # Rendering and committing
 
-Remember to Render your document as a `html` and comment+push to GitHub your code, and rendered html that was created when you knitted the document.
+Remember to Render your document as a `html` and comment+push to GitHub your code, and rendered html that was created when you knitted the document.  Your GitHub repository should have multiple commits with informative commit messsages.
 
 # Citation
 
