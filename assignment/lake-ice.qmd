@@ -11,16 +11,14 @@ format:
 The data for this module are provided within the GitHub repository in the `data`
 sub-directory.
 
--   Data: `data/lake_ice_off_data_2022.xlsx`
+-   Data: `data/lake_ice_off_data.xlsx`
 
 # Import and Prep
 
 The data are in a multi-sheet excel file named
-`data/lake_ice_off_data_2022.xlsx`. You will need to use the `read_excel()`
-function in the `readxl` package to import the data into R as a data frame. You
-can learn more about importing from excel
-[here](https://r4ds.hadley.nz/spreadsheets.html#prerequisites).  Tip: remember that
-excel files can have multiple sheets.
+`data/lake_ice_off_data.xlsx`. You will need to use the `read_excel()`
+function in the `readxl` package to import the data into R as a data frame. You can learn more about importing from excel [here](https://r4ds.hadley.nz/spreadsheets.html#prerequisites).  
+
 
 For some reason `read_excel()` does not like relative paths, we will used the 
 `here` package to local where you your computer your project is located and attached
@@ -28,23 +26,27 @@ the relative path to it.  First install the `here` package.  Then running the `h
 function gets the path to your project.  Using `file.path()` appends the results
 of `here()` to the location of the data within your project/GitHub repository.
 
-
-
 ```{r}
 library(here)
-file_name <- file.path(here(),"data/lake_ice_off_data_2022.xlsx")
+file_name <- file.path(here(),"data/lake_ice_off_data.xlsx")
+```
+
+Now use `read_excel()` to read in `file_name`. Remember that excel files can have multiple sheets.
+
+```{r}
+library(readxl)
+
 ```
 
 Now look at a preview of the data using the `head()` function. The `doy` in
 `ice_off_doy` stands for "day of year" and is the day within the year where ice
-off occurred (January 1 = doy 1)
+off occurred (January 1 = doy 1).  `did_not_freeze` is a column where 1 = did not freeze and 0 = did freeze.
 
 ```{r}
-library(readxl)
-df <- read_excel(file_name)
+
 ```
 
-There should be 3 columns and \~2,659 rows.
+There should be 4 columns and \~2674 rows.
 
 ## Tidy the data
 
