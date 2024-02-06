@@ -89,6 +89,7 @@ Day-of-year = 0-365 (or 366) number defining the day since Jan 1 of that year.
 ## Lakes in data set
 
 ![](img/lake-table.png)
+
 ## Data science skills
 
 - Reading in data from excel files
