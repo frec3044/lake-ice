@@ -1,0 +1,41 @@
+---
+title: "Lake Ice Phenology: Part 2"
+author: 'Add name'
+format:
+  html:
+    embed-resources: true
+---
+
+# Data
+
+The data for this module are provided within the GitHub repository in the `data` sub-directory.
+
+-   Data: `data/lake_ice_off_data.xlsx`
+-   Metadata describing characteristics of the lake: `data/lake_metadata.json`
+
+# How is lake-ice across the globe changing over time?
+
+To answer this question, you need to use all of lakes in the doy-off dataset.
+
+**Question 1:**
+
+Present an analysis that evaluates how the rate of change in doy-off day-of-year is changing over time across the globe (i.e., the seven lakes listed above). You should address the following questions in your analysis
+
+-   What is the mean annual rate of change in ice-off day of year?
+-   What is the distribution of the slopes for the different lakes? Are they all the same sign?
+-   What lake is showing the fastest rate of change in ice cover?
+-   Do any of the following characteristics in the lake metadata relate in the to differences in the slope?
+-   How do you handle years when no ice forms on a lake in your analysis?
+
+The code you use to answer the questions must use skills introduced in the prior modules.
+
+**Answer 1:**
+
+
+# Rendering and committing
+
+Remember to Render your document as HTML and comment+push to GitHub your code and rendered HTML that was created when you knitted the document. Your GitHub repository should have multiple commits with informative commit messages.
+
+# Citation
+
+This module was initially developed as an Excel-based activity by Carey, C.C., J.L. Klug, and D.C. Richardson. 1 April 2015. Project EDDIE: Lake Ice Phenology. Project EDDIE Module 1, Version 1: <http://cemast.illinoisstate.edu/data-for-students/modules/ice-phenology.shtml>. Module development was supported by NSF DEB 1245707.

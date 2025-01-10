@@ -217,6 +217,31 @@ year changing more quickly in more recent years at Lake Sunapee?"
 
 Use a mix of code, figures, and text to present your analysis.
 
+# Are lakes across the globe showing similar patterns to Lake Sunapee
+
+To answer this question, you need to use a set of lakes in the doy-off dataset.  We are going to focus on the following lakes:  `Baikal`, `Cazenovia`, `Mendota`,`Monona`, `Oneida`, `Sunapee` `Wingra`.  Use the `%in%` function to filter the dataset.  Learn more about `%in%` [here] (https://www.datasciencemadesimple.com/in-operator-in-r/)
+
+**Question 12:**
+
+Present an analysis that evaluates how the rate of change in doy-off day-of-year is changing over time across the globe (i.e., the seven lakes listed above). Questions you should address in your analysis
+
+-   What is the distribution of the slopes for the different lakes? Are they all the same sign?
+-   What lake is showing the fastest rate of change in ice cover?
+-   Do any of the following characteristics relate to differences in the slope?
+
+```{r}
+lake_characteristics <- tribble(~lake_name, ~latitude, ~lake_area, ~tropic_status,
+             "Baikal", 53, 31722, "Oligotrophic",
+             "Cazenovia",  42, 4.5, "Eutrophic",
+             "Mendota",  43, 39, "Eutrophic",
+             "Monona",  43, 13, "Eutrophic",
+             "Oneida", 43, 207, "Mesotrophic",
+             "Sunapee",  43, 17, "Oligotrophic",
+             "Wingra",  43, 1, "Eutrophic")
+```             
+**Answer 12:**
+
+
 # Rendering and committing
 
 Remember to Render your document as HTML and comment+push to GitHub your code and rendered HTML that was created when you knitted the document. Your GitHub repository should have multiple commits with informative commit messages.
