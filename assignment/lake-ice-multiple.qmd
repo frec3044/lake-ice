@@ -26,6 +26,7 @@ Present an analysis that evaluates how the rate of change in doy-off day-of-year
 -   What lake is showing the fastest rate of change in ice cover?
 -   Do any of the following characteristics in the lake metadata relate in the to differences in the slope?
 -   How do you handle years when no ice forms on a lake in your analysis?
+-   How does the rate of change in ice cover relate to global temperature change?
 
 The code you use to answer the questions must use skills introduced in the prior modules.
 
@@ -36,6 +37,11 @@ The code you use to answer the questions must use skills introduced in the prior
 
 Remember to Render your document as HTML and comment+push to GitHub your code and rendered HTML that was created when you knitted the document. Your GitHub repository should have multiple commits with informative commit messages.
 
-# Citation
+# Citation of module
 
 This module was initially developed as an Excel-based activity by Carey, C.C., J.L. Klug, and D.C. Richardson. 1 April 2015. Project EDDIE: Lake Ice Phenology. Project EDDIE Module 1, Version 1: <http://cemast.illinoisstate.edu/data-for-students/modules/ice-phenology.shtml>. Module development was supported by NSF DEB 1245707.
+
+# Attribution
+
+Include citation of any AI-generated assistance or discussion with classmates (per policy in syllabus). Proper documentation of AI-generated assistance includes the prompt, the source (e.g., ChatGPT), and the significant parts of the response.  Proper documentation of discussion with classmates include listing their names and the components discussed.  
+
