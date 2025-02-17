@@ -10,7 +10,7 @@ editor: visual
 
 Lakes are changing worldwide due to altered climate. Many lakes that were historically frozen in the winter are now experiencing fewer days of ice cover and earlier ice-off dates.
 
-![](img/lake-ice1.png)
+![](img/lake-ice1.png){fig-alt="photo of a lake"}
 
 ## Phenology
 
@@ -18,7 +18,7 @@ The study of cyclic and seasonal natural phenomena, esp. in relation to climate 
 
 ## What is ice-off
 
-![](img/ice-breakup1.png) ![](img/ice-breakup2.png)
+![](img/ice-breakup1.png){fig-alt="photo of ice breaking up"} ![](img/ice-breakup2.png){fig-alt="photo of ice breaking up"}
 
 ## How does ice melt?
 
@@ -29,7 +29,7 @@ The study of cyclic and seasonal natural phenomena, esp. in relation to climate 
 
 -   When the ice erodes to a layer between 4 and 12 inches (10-30 cm) thick, it transforms into long vertical crystals called "candles." These candles transmit light very well, so the ice starts to look black.
 
-![](img/ice-candles.png)
+![](img/ice-candles.png){fig-alt="photo of ice candles"}
 
 ## How does ice melt? (cont'd)
 
@@ -47,52 +47,55 @@ The study of cyclic and seasonal natural phenomena, esp. in relation to climate 
 
 Day-of-year = 0-365 (or 366) number defining the day since Jan 1 of that year.
 
-![](img/sunpee-ice-off.png)
+![](img/sunpee-ice-off.png){fig-alt="photo Lake Sunapee Ice-off record"}
 
 ## Graphing Sunapee dataset
 
-![](img/sunapee-graph.png)
+![](img/sunapee-graph.png){fig-alt="graph of data"}
 
 ## Linear regression
 
-![](img/regression1.png)
+![](img/regression1.png){fig-alt="linear regression equation"}
 
 ## Linear regression
 
-![](img/regression2.png)
+![](img/regression2.png){fig-alt="linear regression equation"}
 
 ## Linear regression
 
-![](img/regression3.png)
+![](img/regression3.png){fig-alt="linear regression equation"}
 
 ## Linear regression
 
-![](img/r2-1.png)
+![](img/r2-1.png){fig-alt="linear regression with r2 of 1"}
 
 ## Linear regression
 
-![](img/r2-2.png)
+![](img/r2-2.png){fig-alt="linear regression with r2 of 0"}
 
 ## Linear regression
 
-![](img/r2-3.png)
+![](img/r2-3.png){fig-alt="linear regression with r2 of 0.3"}
 
 ## Linear regression
 
-![](img/sunpee-graph2.png)
+![](img/sunpee-graph2.png){fig-alt="linear regression with two time periods"}
 
 ## Key Questions
 
--   How fast is the date that ice-off occurs changing over time?\
--   How does this rate of change differ among lakes across the globe?
-
-## Lakes in data set
-
-![](img/lake-table.png)
+-   How fast is the date that ice-off occurs changing over time for a focal lake?\
 
 ## Data science skills
 
-- Reading in data from excel files
-- Linear regression
-- Prediction
-- Improved figures: clear title and axis labels
+-   Reading in data from excel files
+-   Linear regression
+-   Prediction
+-   Improved figures: clear title and axis labels
+
+## Assignment
+
+- Your will be submitting *lake-ice-part1* for this assignment. 
+- Lake-ice-part2 is Assignment 9 that requires you to pull together skills across to skill in a elegant way
+
+
+

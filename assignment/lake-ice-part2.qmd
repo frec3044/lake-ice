@@ -19,16 +19,16 @@ To answer this question, you need to use all of lakes in the doy-off dataset.
 
 **Question 1:**
 
-Present an analysis that evaluates how the rate of change in doy-off day-of-year is changing over time across the globe (i.e., the seven lakes listed above). You should address the following questions in your analysis
+Present an analysis that evaluates how the rate of change in doy-off day-of-year is changing over time for each of the lakes across the globe. You should address the following questions in your analysis
 
 -   What is the mean annual rate of change in ice-off day of year?
+-   How does the rate of change in ice cover relate to global temperature change?
 -   What is the distribution of the slopes for the different lakes? Are they all the same sign?
 -   What lake is showing the fastest rate of change in ice cover?
--   Do any of the following characteristics in the lake metadata relate in the to differences in the slope?
+-   Do any of the characteristics in the lake metadata relate in the to differences in the slope? You should provide a quantitative answer
 -   How do you handle years when no ice forms on a lake in your analysis?
--   How does the rate of change in ice cover relate to global temperature change?
 
-The code you use to answer the questions must use skills introduced in the prior modules.
+The code you use to answer the questions *must* use skills introduced in the prior modules. For example, if you iterate a calcuation of over lakes, you need to use a `map` function.
 
 **Answer 1:**
 
