@@ -15,8 +15,6 @@ The data for this module are provided within the GitHub repository in the `data`
 # Import and Prep
 
 The data are in a multi-sheet Excel file named `data/lake_ice_off_data.xlsx`. You will need to use the `read_excel()` function in the `readxl` package to import the data into R as a data frame. You can learn more about importing from Excel [here](https://r4ds.hadley.nz/spreadsheets.html#prerequisites).  
-
-
 For some reason, `read_excel()` does not like relative paths, so we will use the `here` package to locate your project on your computer. First, install the `here` package.  Then, run the `here()` function to get the path to your project.  Using `file.path()` appends the results of `here()` to the location of the data within your project/GitHub repository.
 
 ```{r}
@@ -186,17 +184,19 @@ How comfortable are you proceeding with using this linear model for additional a
 
 **Answer 9:**
 
+**Question 10:**
 Now plot the data for Lake Sunapee (just like above - year on x-axis vs. ice of doy on y axis) but add the line from your regression results (e.g., fit intercept and slope). You will use the [`geom_abline`](https://ggplot2.tidyverse.org/reference/geom_abline.html). 
 
+**Answer 10:**
 ```{r}
 #INSERT CODE
 ```
 
-**Question 10:**
+**Question 11:**
 
 Use the regression model to predict the ice-off day of the year in 2030. Remember that year in the linear model (y = b + mx).
 
-**Answer 10:**
+**Answer 11:**
 
 ```{r}
 #INSERT CODE
@@ -206,18 +206,17 @@ Use the regression model to predict the ice-off day of the year in 2030. Remembe
 
 To answer this question, you need to divide the Sunapee dataset into two datasets that represent an early and later period. For this analysis, use the year 1970 as a cut-off (one dataset is before 1970, and the other is 1970 and after).
 
-**Question 11:**
+**Question 12:**
 
-Use the skills developed above to evaluate the question "Is the ice-off day of
-year changing more quickly in more recent years at Lake Sunapee?"
+Use the skills developed above to evaluate the question "Is the ice-off day of year changing more quickly in more recent years at Lake Sunapee?"
 
-**Answer 11:**
+**Answer 12:**
 
-Use a mix of code, figures, and text to present your analysis.
+Use a mix of code, figures, and text to present your analysis.  If you want to compare slopes, be sure they are on the same plot.
 
 # Rendering and committing
 
-Remember to Render your document as HTML and comment+push to GitHub your code and rendered HTML that was created when you knitted the document. Your GitHub repository should have multiple commits with informative commit messages.
+Remember to Render your document as HTML and comment+push to GitHub your code and rendered HTML that was created when you rendered the document. Your GitHub repository should have multiple commits with informative commit messages.
 
 # Citation of model
 
