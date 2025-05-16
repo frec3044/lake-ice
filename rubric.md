@@ -30,7 +30,7 @@ Question 4:
 
 - Full Credit: Correct R2 is provided given the regression fit.  An answer is provided about the strength of the relationship.
 
-- Partial Credit: Incorrect R2 is provided given the regression fit OR no answer is provided about the strength of the relationship.
+- Partial Credit: Incorrect R2 is provided given for the regression fit OR no answer is provided about the strength of the relationship.
 
 - No Credit: No answer provided
 
@@ -110,6 +110,6 @@ GitHub
 
 -   Partial Credit: Assignment found on course GitHub, but only a single commit was provided (no evidence that the student saved and committed progress) or missing HTML on GitHub.
 
--   No Credit: Assignment not found on the course GitHub organization
+-   No Credit: Assignment not found on the course GitHub organization OR no commits on GitHub found.
 
 
