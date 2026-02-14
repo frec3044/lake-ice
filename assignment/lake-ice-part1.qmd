@@ -1,6 +1,6 @@
 ---
 title: "Lake Ice Phenology: Part 1"
-author: 'Add name'
+author: 'YOUR NAME'
 format:
   html:
     embed-resources: true
@@ -35,7 +35,7 @@ Now, look at a preview of the data using the `head()` function. The `doy` in `ic
 
 ```
 
-There should be four columns and \~2674 rows.
+There should be four columns and \~2703 rows.
 
 ## Tidy the data
 
@@ -102,7 +102,7 @@ What is the direction of the slope? How does this match your expectations from Q
 
 ## R2
 
-First, it is important to understand how much variation is explained by the model using the R2 value in the `summary`. A value of R2 close to 1 means that the predictor (`year`) explains nearly all of the variation in the variable we are predicting: `ice_off_doy`. A value of R2 close to 0 explains very little of the variation in `ice_off_doy`. Since we want to be able to explain how `ice_off_doy` is changing over time using `year,` we are aiming for a high R2. Allow R2 would indicate that our model isn't particularly good at explaining what future values of `ice_off_doy` will be.
+First, it is important to understand how much variation is explained by the model using the R2 value in the `summary`. A value of R2 close to 1 means that the predictor (`year`) explains nearly all of the variation in the variable we are predicting: `ice_off_doy`. A value of R2 close to 0 explains very little of the variation in `ice_off_doy`. Since we want to be able to explain how `ice_off_doy` is changing over time using `year,` we are aiming for a high R2. A low R2 would indicate that our model isn't particularly good at explaining what future values of `ice_off_doy` will be.
 
 **Question 4:**
 
@@ -112,7 +112,7 @@ What is the R2 for the regression? Based on the R2, is `year` and `ice_off_doy` 
 
 ## Residuals normally distributed
 
-Second, it is important that the residuals from our linear model are normally distributed.  The following is a number distribution that you can visually compare to:
+Second, it is important that the residuals from our linear model are normally distributed.  The following is a normal distribution that you can visually compare to:
 
 ```{r}
 ggplot(data = tibble(value = rnorm(1000, 0, 1))) +
@@ -147,7 +147,7 @@ Now, to visualize the residuals, use `geom_histogram()` to plot them as a histog
 
 **Question 6:**
 
-Show Histogram. Do the residuals meet the assumptions of the linear regression? (are the residuals normally distributed with the distribution centered around zero)?
+Show Histogram and answer the following question: do the residuals meet the assumptions of the linear regression? (are the residuals normally distributed with the distribution centered around zero)?
 
 **Answer 6:**
 
@@ -158,7 +158,7 @@ Show Histogram. Do the residuals meet the assumptions of the linear regression? 
 
 ## The slope is different from zero
 
-A slope could appear to be higher or lower than zero, but the uncertainty in the slope is large enough that there is a chance that the value is 0 (thus limiting our capacity to believe the value for the slope is not zero). Here, we will focus on the p-value of the slope. The p-value is the probability of obtaining a slope at least as extreme as the one calculated from the data, assuming the truth of the null hypothesis that the slope is 0 (from <https://en.wikipedia.org/wiki/P-value>). In this case, what is the probability of observing our slope value assuming the actual slope is 0? Smaller probabilities mean there is a lower chance that our slope is equal to 0.
+A slope could appear to be higher or lower than zero, but the uncertainty in the slope is large enough that there is a chance that the slope value is 0 (thus limiting our capacity to believe the value for the slope is not zero). Here, we will focus on the p-value of the slope. The p-value is the probability of obtaining a slope at least as extreme as the one calculated from the data, assuming the truth of the null hypothesis that the slope is 0 (from <https://en.wikipedia.org/wiki/P-value>). In this case, what is the probability of observing our slope value assuming the actual slope is 0? Smaller probabilities mean there is a lower chance that our slope is equal to 0.
 
 **Question 7:**
 
@@ -168,11 +168,11 @@ Based on the `summary()` above, what is the p-value for the slope?
 
 ## The slope physically meaningful
 
-A slope value could have a low probability of being 0 (those we have a strong belief that it is not zero), but the magnitude of change is functionally meaningless in the physical world (i.e., the rate of change is so small that we would not think much of it). This can occur particularly when analyzing large datasets.
+A slope value could have a low probability of being 0 (thus we have a strong belief that it is not zero), but the magnitude of change is functionally meaningless in the physical world (i.e., the rate of change is so small that we would not think much of it). This can occur particularly when analyzing large datasets.
 
 **Question 8:**
 
-Based on the slope value, how many more years are needed to pass before the lake has 1 week of change in ice off doy? Do you think this is meaningful? Why?
+Based on the slope value, how many more years are needed to pass before the lake has a 1 week change in ice off doy? Do you think this is meaningful? Why?
 
 **Answer 8:**
 
@@ -189,17 +189,20 @@ Now plot the data for Lake Sunapee (just like above - year on x-axis vs. ice of 
 
 **Answer 10:**
 ```{r}
-#INSERT CODE
+
 ```
 
 **Question 11:**
 
-Use the regression model to predict the ice-off day of the year in 2030. Remember that year in the linear model (y = b + mx).
+- Use the regression model to predict the ice-off day of the year in 2040 (provide answer). Remember that year is in the linear model (y = b + mx).  
+- Calculate the 90% confidence interval by using the quantile function to determine the 5% and 95% quantile for your residuals in Question 6 (the 5% should be a negative number and the 95% should be a positive number because your residuals are centered around 0).
+- Add lower confidence interval (a negative number) and the upper confidence interval (a positive number) to your prediction for 2040 to calculate the 90% confidence interval around your prediction (provide your answer). 
+- How wide is your confidence interval (number of days)?
 
 **Answer 11:**
 
 ```{r}
-#INSERT CODE
+
 ```
 
 # Is the ice-off day of the year changing more quickly in more recent years at Lake Sunapee?

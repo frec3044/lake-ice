@@ -1,20 +1,32 @@
 ---
-title: "Lake Ice Phenology"
+title: "Lake Ice"
 format: 
   revealjs:
     embed-resources: true
 editor: visual
 ---
 
-## Why
+## Why analyze lake ice?
 
 Lakes are changing worldwide due to altered climate. Many lakes that were historically frozen in the winter are now experiencing fewer days of ice cover and earlier ice-off dates.
 
-![](img/lake-ice1.png){fig-alt="photo of a lake"}
+![](img/lake-ice1.png){fig-alt="photo of a lake" fig-align="center"}
 
-## Phenology
+## One of many climate change indicators
 
-The study of cyclic and seasonal natural phenomena, esp. in relation to climate and plant and animal life
+-   Global annual average surface temperature ✅
+
+-   Atmospheric concentrations of carbon dioxide ✅
+
+-   Ocean heat content
+
+-   Global mean sea level
+
+-   Global precipitation
+
+-   Changing extent or mass of the cryosphere (ice) 🚀
+
+    Source: World Meteorological Organization (WMO)
 
 ## What is ice-off
 
@@ -23,13 +35,14 @@ The study of cyclic and seasonal natural phenomena, esp. in relation to climate 
 ## How does ice melt?
 
 -   During the period of ice cover, snow on the ice both reflects sunlight and insulates the lake. With a thick snow layer, the lake neither gains nor loses heat to the atmosphere. The sediment at the bottom of the lake can actually be a small heat source to the water column over the winter, from stored heat over the summer.
--   In the early spring, as the air warms and solar radiation increases, the snow melts, allowing light to penetrate the ice. The ice can act like glass in a greenhouse, allowing the lake water to warm. As a result, the ice begins to melt from the bottom, not the top.
+-   In the early spring, as the air warms and solar radiation increases, the snow melts, allowing light to penetrate the ice. The ice can act like glass in a greenhouse, allowing the lake water to warm.
+-   The ice begins to melt from the [bottom, not the top.]{.underline}
 
 ## How does ice melt? (cont'd)
 
 -   When the ice erodes to a layer between 4 and 12 inches (10-30 cm) thick, it transforms into long vertical crystals called "candles." These candles transmit light very well, so the ice starts to look black.
 
-![](img/ice-candles.png){fig-alt="photo of ice candles"}
+![](img/ice-candles.png){fig-alt="photo of ice candles" fig-align="center"}
 
 ## How does ice melt? (cont'd)
 
@@ -38,64 +51,80 @@ The study of cyclic and seasonal natural phenomena, esp. in relation to climate 
 
 ## Why are changes in ice-off dates important ecologically
 
--   Clearwater phase mismatch
 -   Warmer water -\> less dissolved oxygen -\> Bad for cold-water fish that need cold temps and lots of oxygen
 -   Less dissolved oxygen and anoxia -\> Increase in P and reduced metals cycling from the sediment
--   Warmer water -\> Increased primary productivity
+-   Warmer water -\> Increased primary productivity (algal blooms)
 
 ## How do we measure ice-off?
 
 Day-of-year = 0-365 (or 366) number defining the day since Jan 1 of that year.
 
-![](img/sunpee-ice-off.png){fig-alt="photo Lake Sunapee Ice-off record"}
+![](img/sunpee-ice-off.png){fig-alt="photo Lake Sunapee Ice-off record" fig-align="center"}
 
-## Graphing Sunapee dataset
+## How do we model ice-off?
 
-![](img/sunapee-graph.png){fig-alt="graph of data"}
-
-## Linear regression
-
-![](img/regression1.png){fig-alt="linear regression equation"}
-
-## Linear regression
-
-![](img/regression2.png){fig-alt="linear regression equation"}
+-   Linear regression
+-   y = m \* x + b
+-   x is the "independent variable" (year)
+-   y is is the "dependent variable" (ice-off day of year; Julian day)
 
 ## Linear regression
 
-![](img/regression3.png){fig-alt="linear regression equation"}
+-   Linear regression
+-   y = m \* x + b
+-   m is the "slope" (ice-off day / per year)
+-   b is the "intercept" (ice-off day when year = 0)
 
-## Linear regression
+## Quality of model: coefficients
+
+-   Linear regression
+-   y = m \* x + b
+-   We estimate coefficients (m and b) to build a model that relates year to ice-off day of year
+-   If m is different than 0, then we have a significant relationship
+
+## Quality of model: R2
 
 ![](img/r2-1.png){fig-alt="linear regression with r2 of 1"}
 
-## Linear regression
+## Quality of model: R2
 
 ![](img/r2-2.png){fig-alt="linear regression with r2 of 0"}
 
-## Linear regression
+## Quality of model: R2
 
 ![](img/r2-3.png){fig-alt="linear regression with r2 of 0.3"}
 
-## Linear regression
+## Residuals
 
-![](img/sunpee-graph2.png){fig-alt="linear regression with two time periods"}
+-   If you subtract predicted line from the data you get the residuals
+-   Residuals should be centered on zero
+-   Residuals should be normally distributed (most values are close to zero)
+-   Residuals should be relatively small
+-   Residuals are small when R2 is near 1 and large when R2 is near 0.
 
 ## Key Questions
 
--   How fast is the date that ice-off occurs changing over time for a focal lake?\
+-   How fast is the date that ice-off occurs changing over time for a focal lake?
+-   How well can we model ice-off and apply to future predictions?
 
 ## Data science skills
 
 -   Reading in data from excel files
 -   Linear regression
 -   Prediction
+-   Model assessment
 -   Improved figures: clear title and axis labels
 
 ## Assignment
 
-- Your will be submitting *lake-ice-part1* for this assignment. 
-- Lake-ice-part2 is Assignment 9 that requires you to pull together skills across to skill in a elegant way
+-   Your will be submitting *lake-ice-part1* for this assignment.
 
+## Assignment reminders
 
-
+-   Accept (e.g., fork) assignment
+-   Clone your accepted assignment repo to your computer
+-   Work on assignment (many commits expected)
+-   Push assignment to GitHub (many times - this a backup)
+-   Final render of the document to HTML
+-   Commit and push HTML to GitHub
+-   Upload HTML to Canvas

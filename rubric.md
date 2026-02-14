@@ -80,9 +80,13 @@ Question 10:
 
 Question 11:   
 
-- Full Credit:  Correct calculation of the ice-off day in 2030. 
+- Full Credit:  Correct calculation of the ice-off day in 2040, 90% confidence intervals, and answers the question about how wide the confidence interval is.
 
-- No Credit: Incorrect calculation of the ice-off day in 2030 or no answer provided.
+- Partial Credit:  Incorrect calculation of the ice-off day in 2040, Incorrect calculation 90% confidence intervals, or does not answers the question about how wide the confidence interval is.
+
+- Partial Credit:  Incorrect calculation of the ice-off day in 2040, Incorrect calculation of 90% confidence intervals, and does not answers the question about how wide the confidence interval is.
+
+- No Credit: no answer provided.
 
 Question 12:
 
@@ -110,6 +114,6 @@ GitHub
 
 -   Partial Credit: Assignment found on course GitHub, but only a single commit was provided (no evidence that the student saved and committed progress) or missing HTML on GitHub.
 
--   No Credit: Assignment not found on the course GitHub organization OR no commits on GitHub found.
+-   No Credit: Assignment not found on the course GitHub organization OR no commits from the student on GitHub.
 
 
