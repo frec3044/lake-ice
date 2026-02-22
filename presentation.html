@@ -1096,6 +1096,18 @@ margin-right: 0; }
 <li>Residuals are small when R2 is near 1 and large when R2 is near 0.</li>
 </ul>
 </section>
+<section id="linear-regression-in-r" class="slide level2">
+<h2>Linear regression in R</h2>
+<p>The following function runs a linear regression in R:</p>
+<pre><code>linear_model &lt;- lm(dependent_variable ~ independent_variable1, data = df)</code></pre>
+<p>where</p>
+<ul>
+<li><p>The dependent variable (aka the predicted variable) is on the left side of the <code>~</code></p></li>
+<li><p>Independent variables (aka predictors, covariates, or features) are on the right side of the <code>~</code>.</p></li>
+<li><p>Both variables need to be the in the data frame, <code>df</code>.</p></li>
+<li><p><code>linear_model</code> is the result of the linear regression</p></li>
+</ul>
+</section>
 <section id="key-questions" class="slide level2">
 <h2>Key Questions</h2>
 <ul>

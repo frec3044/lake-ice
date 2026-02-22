@@ -6,6 +6,10 @@ format:
     embed-resources: true
 ---
 
+## GitHub link
+
+Provide link to your assignment GitHub repository here:
+
 # Data
 
 The data for this module are provided within the GitHub repository in the `data` sub-directory.
@@ -197,9 +201,9 @@ Now plot the data for Lake Sunapee (just like above - year on x-axis vs. ice of 
 The goal of this question is to make a forecast of the future ice-off day (with uncertainty estimate) using your model.
 
 - Use the regression model to predict the ice-off day of the year in 2040 (provide answer). Remember that year is in the linear model (y = b + mx).  
-- Calculate the 90% confidence interval by using the`quantile` function to determine the 5% and 95% quantile for your residuals in Question 6 (the 5% should be a negative number and the 95% should be a positive number because your residuals are centered around 0).  You will use the vector of residuals from Question 6 in your calculation.
-- Add lower confidence interval (a negative number) and the upper confidence interval (a positive number) to your prediction for 2040 to calculate the 90% confidence interval around your prediction (provide your answer). 
-- How wide is your confidence interval (number of days)?
+- Calculate the 90% predictive interval by using the`quantile` function to determine the 5% and 95% quantile for your residuals in Question 6 (the 5% should be a negative number and the 95% should be a positive number because your residuals are centered around 0).  You will use the vector of residuals from Question 6 in your calculation.
+- Add lower predictive interval (a negative number) and the upper predictive interval (a positive number) to your prediction for 2040 to calculate the 90% predictive interval around your prediction (provide your answer). 
+- How wide is your predictive interval (number of days)?
 
 **Answer 11:**
 

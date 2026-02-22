@@ -102,6 +102,24 @@ Day-of-year = 0-365 (or 366) number defining the day since Jan 1 of that year.
 -   Residuals should be relatively small
 -   Residuals are small when R2 is near 1 and large when R2 is near 0.
 
+## Linear regression in R
+
+The following function runs a linear regression in R:
+
+```         
+linear_model <- lm(dependent_variable ~ independent_variable1, data = df)
+```
+
+where
+
+-   The dependent variable (aka the predicted variable) is on the left side of the `~`
+
+-   Independent variables (aka predictors, covariates, or features) are on the right side of the `~`.
+
+-   Both variables need to be the in the data frame, `df`.
+
+-   `linear_model` is the result of the linear regression
+
 ## Key Questions
 
 -   How fast is the date that ice-off occurs changing over time for a focal lake?
